@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D42159636F00DD04A5 /* AppDelegate.swift */; };
+		7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D62159636F00DD04A5 /* MainVC.swift */; };
+		7CADC4DC2159637000DD04A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CADC4DB2159637000DD04A5 /* Assets.xcassets */; };
+		7CADC4DF2159637000DD04A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CADC4DD2159637000DD04A5 /* LaunchScreen.storyboard */; };
+		7CADC4EA2159637000DD04A5 /* Anoda_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4E92159637000DD04A5 /* Anoda_TestTests.swift */; };
+		7CADC4F62159640300DD04A5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4F52159640300DD04A5 /* HomeVC.swift */; };
+		7CADC4F82159641C00DD04A5 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4F72159641C00DD04A5 /* SearchVC.swift */; };
+		7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4F92159643000DD04A5 /* AddPostVC.swift */; };
+		7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FB2159643900DD04A5 /* LikesVC.swift */; };
+		7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CADC4E62159637000DD04A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CADC4C92159636F00DD04A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CADC4D02159636F00DD04A5;
+			remoteInfo = Anoda_Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7CADC4D12159636F00DD04A5 /* Anoda_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anoda_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CADC4D42159636F00DD04A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CADC4D62159636F00DD04A5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		7CADC4DB2159637000DD04A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CADC4DE2159637000DD04A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CADC4E02159637000DD04A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CADC4E52159637000DD04A5 /* Anoda_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Anoda_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CADC4E92159637000DD04A5 /* Anoda_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anoda_TestTests.swift; sourceTree = "<group>"; };
+		7CADC4EB2159637000DD04A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CADC4F52159640300DD04A5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7CADC4F72159641C00DD04A5 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		7CADC4F92159643000DD04A5 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		7CADC4FB2159643900DD04A5 /* LikesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesVC.swift; sourceTree = "<group>"; };
+		7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CADC4CE2159636F00DD04A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CADC4E22159637000DD04A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CADC4C82159636F00DD04A5 = {
+			isa = PBXGroup;
+			children = (
+				7CADC4D32159636F00DD04A5 /* Anoda_Test */,
+				7CADC4E82159637000DD04A5 /* Anoda_TestTests */,
+				7CADC4D22159636F00DD04A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CADC4D22159636F00DD04A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC4D12159636F00DD04A5 /* Anoda_Test.app */,
+				7CADC4E52159637000DD04A5 /* Anoda_TestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CADC4D32159636F00DD04A5 /* Anoda_Test */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC4F4215963C200DD04A5 /* TabBarVC */,
+				7CADC4D42159636F00DD04A5 /* AppDelegate.swift */,
+				7CADC4D62159636F00DD04A5 /* MainVC.swift */,
+				7CADC4DB2159637000DD04A5 /* Assets.xcassets */,
+				7CADC4DD2159637000DD04A5 /* LaunchScreen.storyboard */,
+				7CADC4E02159637000DD04A5 /* Info.plist */,
+			);
+			path = Anoda_Test;
+			sourceTree = "<group>";
+		};
+		7CADC4E82159637000DD04A5 /* Anoda_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC4E92159637000DD04A5 /* Anoda_TestTests.swift */,
+				7CADC4EB2159637000DD04A5 /* Info.plist */,
+			);
+			path = Anoda_TestTests;
+			sourceTree = "<group>";
+		};
+		7CADC4F4215963C200DD04A5 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC4F52159640300DD04A5 /* HomeVC.swift */,
+				7CADC4F72159641C00DD04A5 /* SearchVC.swift */,
+				7CADC4F92159643000DD04A5 /* AddPostVC.swift */,
+				7CADC4FB2159643900DD04A5 /* LikesVC.swift */,
+				7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CADC4D02159636F00DD04A5 /* Anoda_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CADC4EE2159637000DD04A5 /* Build configuration list for PBXNativeTarget "Anoda_Test" */;
+			buildPhases = (
+				7CADC4CD2159636F00DD04A5 /* Sources */,
+				7CADC4CE2159636F00DD04A5 /* Frameworks */,
+				7CADC4CF2159636F00DD04A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anoda_Test;
+			productName = Anoda_Test;
+			productReference = 7CADC4D12159636F00DD04A5 /* Anoda_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CADC4E42159637000DD04A5 /* Anoda_TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CADC4F12159637000DD04A5 /* Build configuration list for PBXNativeTarget "Anoda_TestTests" */;
+			buildPhases = (
+				7CADC4E12159637000DD04A5 /* Sources */,
+				7CADC4E22159637000DD04A5 /* Frameworks */,
+				7CADC4E32159637000DD04A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CADC4E72159637000DD04A5 /* PBXTargetDependency */,
+			);
+			name = Anoda_TestTests;
+			productName = Anoda_TestTests;
+			productReference = 7CADC4E52159637000DD04A5 /* Anoda_TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CADC4C92159636F00DD04A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = SergLam;
+				TargetAttributes = {
+					7CADC4D02159636F00DD04A5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					7CADC4E42159637000DD04A5 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 7CADC4D02159636F00DD04A5;
+					};
+				};
+			};
+			buildConfigurationList = 7CADC4CC2159636F00DD04A5 /* Build configuration list for PBXProject "Anoda_Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CADC4C82159636F00DD04A5;
+			productRefGroup = 7CADC4D22159636F00DD04A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CADC4D02159636F00DD04A5 /* Anoda_Test */,
+				7CADC4E42159637000DD04A5 /* Anoda_TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CADC4CF2159636F00DD04A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CADC4DF2159637000DD04A5 /* LaunchScreen.storyboard in Resources */,
+				7CADC4DC2159637000DD04A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CADC4E32159637000DD04A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CADC4CD2159636F00DD04A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CADC4F82159641C00DD04A5 /* SearchVC.swift in Sources */,
+				7CADC4F62159640300DD04A5 /* HomeVC.swift in Sources */,
+				7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */,
+				7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */,
+				7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */,
+				7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */,
+				7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CADC4E12159637000DD04A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CADC4EA2159637000DD04A5 /* Anoda_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CADC4E72159637000DD04A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CADC4D02159636F00DD04A5 /* Anoda_Test */;
+			targetProxy = 7CADC4E62159637000DD04A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7CADC4DD2159637000DD04A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CADC4DE2159637000DD04A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CADC4EC2159637000DD04A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CADC4ED2159637000DD04A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CADC4EF2159637000DD04A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				INFOPLIST_FILE = Anoda_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "serglam.Anoda-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CADC4F02159637000DD04A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				INFOPLIST_FILE = Anoda_Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "serglam.Anoda-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7CADC4F22159637000DD04A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				INFOPLIST_FILE = Anoda_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "serglam.Anoda-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anoda_Test.app/Anoda_Test";
+			};
+			name = Debug;
+		};
+		7CADC4F32159637000DD04A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				INFOPLIST_FILE = Anoda_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "serglam.Anoda-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anoda_Test.app/Anoda_Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CADC4CC2159636F00DD04A5 /* Build configuration list for PBXProject "Anoda_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CADC4EC2159637000DD04A5 /* Debug */,
+				7CADC4ED2159637000DD04A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CADC4EE2159637000DD04A5 /* Build configuration list for PBXNativeTarget "Anoda_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CADC4EF2159637000DD04A5 /* Debug */,
+				7CADC4F02159637000DD04A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CADC4F12159637000DD04A5 /* Build configuration list for PBXNativeTarget "Anoda_TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CADC4F22159637000DD04A5 /* Debug */,
+				7CADC4F32159637000DD04A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CADC4C92159636F00DD04A5 /* Project object */;
+}
