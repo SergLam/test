@@ -32,7 +32,8 @@ class MainVC: UITabBarController {
         likesVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .favorites, tag: 3)
         profileVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .contacts, tag: 4)
         self.tabBar.isTranslucent = false
-        self.viewControllers = [homeVC, searchVC, addPostVC, likesVC, profileVC]
+        let controllers = [homeVC, searchVC, addPostVC, likesVC, profileVC]
+        self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         self.selectedIndex = 0
     }
     

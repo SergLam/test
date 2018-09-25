@@ -15,4 +15,9 @@ class SearchVC: UIViewController {
         self.view.backgroundColor = UIColor.brown
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Search"
+    }
+    
 }

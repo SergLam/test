@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let rootViewController = MainVC()
-        let navigationController = UINavigationController(rootViewController: rootViewController)
+//        let navigationController = UINavigationController(rootViewController: rootViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
-        window?.rootViewController = navigationController
+        window?.rootViewController = rootViewController
         return true
     }
 

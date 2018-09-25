@@ -15,4 +15,9 @@ class ProfileVC: UIViewController {
         self.view.backgroundColor = UIColor.yellow
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "My profile"
+    }
+    
 }
