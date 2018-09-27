@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class PostImageCell: UICollectionViewCell{
     
@@ -30,8 +31,10 @@ class PostImageCell: UICollectionViewCell{
         }
     }
     
-    func updateCell(image: UIImage?){
-        postImage.image = image
+    func updateCell(image_url: String?){
+        if let url = URL(string: image_url ?? ""){
+            postImage.kf.setImage(with: url)
+        }
     }
 
 }

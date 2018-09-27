@@ -11,11 +11,7 @@ import UIKit
 class JSONFileParser{
     
     static let shared = JSONFileParser()
-    
-    init() {
-
-    }
-    
+        
     func getLocalJSON() -> [Post]{
         var parsed_posts: [Post] = []
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {

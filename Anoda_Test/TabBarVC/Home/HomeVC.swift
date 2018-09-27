@@ -14,6 +14,8 @@ class HomeVC: UIViewController{
     var newsTable = UITableView()
     
     var jsonSource = JSONFileParser.shared
+    
+    var posts: [Post] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,7 @@ class HomeVC: UIViewController{
         let invisible_height = tabbarHeight + topbarHeight
         newsTable.estimatedRowHeight = self.view.frame.height - invisible_height
         newsTable.rowHeight = self.view.frame.height - invisible_height
-        print(jsonSource.getLocalJSON())
+        posts = jsonSource.getLocalJSON()
     }
     
     override func viewWillAppear(_ animated: Bool) {

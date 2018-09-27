@@ -10,14 +10,13 @@ import UIKit
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeTableCell.init(style: .default, reuseIdentifier: HomeTableCell.cellIdentifier)
         cell.postImages.register(PostImageCell.self, forCellWithReuseIdentifier: PostImageCell.cellIdentifier)
-//        cell.setCollectionViewDataSourceDelegate(cell, forRow: indexPath.row)
-        cell.updateCell()
+        cell.updateCell(post: posts[indexPath.row])
         return cell
     }
     

@@ -12,12 +12,12 @@ extension HomeTableCell: UICollectionViewDataSource, UICollectionViewDelegate, U
     // MARK: Post images collection view
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return postImagesArray.count
+        return postImagesUrlArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCell.cellIdentifier, for: indexPath) as! PostImageCell
-        cell.updateCell(image: postImagesArray[indexPath.row])
+        cell.updateCell(image_url: postImagesUrlArray[indexPath.row])
         return cell
     }
     

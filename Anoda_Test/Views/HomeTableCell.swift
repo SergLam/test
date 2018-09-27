@@ -8,18 +8,12 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
+import SCLAlertView
 
 class HomeTableCell: UITableViewCell {
 
-    var postImagesArray: [UIImage] = [UIImage.init(named: "mr_black")!, UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!,
-                                      UIImage.init(named: "mr_black")!]
+    var postImagesUrlArray: [String] = []
     
     static let cellIdentifier = String(describing: self)
     
@@ -61,15 +55,6 @@ class HomeTableCell: UITableViewCell {
         postImages.dataSource = self
         postImages.showsVerticalScrollIndicator = false
     }
-        
-//    func setCollectionViewDataSourceDelegate<D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
-//        postImages.delegate = dataSourceDelegate
-//        postImages.dataSource = dataSourceDelegate
-//        postImages.tag = row
-//        postImages.setContentOffset(postImages.contentOffset, animated:false) // Stops collection view if it was scrolling.
-//        postImages.reloadData()
-//    }
-
     
     override func layoutSubviews() {
         // TODO: custom ui layout
@@ -121,6 +106,7 @@ class HomeTableCell: UITableViewCell {
             make.width.height.equalTo(contentView.frame.width)
         }
         
+        pinButton.addTarget(self, action: #selector(pressPinButton(_:)), for: .touchUpInside)
         contentView.addSubview(pinButton)
         pinButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(15)
@@ -129,6 +115,7 @@ class HomeTableCell: UITableViewCell {
             make.width.equalTo(20)
         }
         
+        likeButton.addTarget(self, action: #selector(pressLikeButton(_:)), for: .touchUpInside)
         contentView.addSubview(likeButton)
         likeButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
@@ -136,6 +123,7 @@ class HomeTableCell: UITableViewCell {
             make.height.width.equalTo(30)
         }
         
+        messageButton.addTarget(self, action: #selector(pressMessageButton(_:)), for: .touchUpInside)
         contentView.addSubview(messageButton)
         messageButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
@@ -143,17 +131,13 @@ class HomeTableCell: UITableViewCell {
             make.height.width.equalTo(30)
         }
         
+        shareButton.addTarget(self, action: #selector(pressShareButton(_:)), for: .touchUpInside)
         contentView.addSubview(shareButton)
         shareButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(messageButton.snp.right).offset(10)
             make.height.width.equalTo(30)
         }
-        
-        
-        pageControl.numberOfPages = 10
-        pageControl.currentPage = 0
-        
         
         pageControl.tintColor = UIColor.red
         pageControl.pageIndicatorTintColor = UIColor.lightGray
@@ -194,15 +178,23 @@ class HomeTableCell: UITableViewCell {
                 
     }
     
-    func updateCell(){
-        userProfileImage.image = UIImage.init(named: "mr_black")
+    func updateCell(post: Post){
+        if let url = URL(string: post.userPhotoURL ?? ""){
+            userProfileImage.kf.setImage(with: url)
+        }
+        
         userProfileImage.backgroundColor = UIColor.black
         
-        userName.text = "User Name"
-        userStatus.text = "Some stupid user status"
+        userName.text = post.userName
+        userStatus.text = post.userStatus
         
-//        postImages.image = UIImage.init(named: "mr_black")
-        postImages.reloadData()
+        if let postPictures = post.postImages{
+            postImagesUrlArray = postPictures
+            postImages.reloadData()
+        }
+        
+        pageControl.numberOfPages = postImagesUrlArray.count
+        pageControl.currentPage = 0
         
         pinButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
         
@@ -212,11 +204,39 @@ class HomeTableCell: UITableViewCell {
         
         shareButton.setImage(UIImage.init(named: "share"), for: .normal)
         
-        likedByList.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis turpis id ante bibendum euismod."
+        var liked_text = "Liked by"
+        if let likes = post.likes{
+            for like in likes{
+                liked_text = liked_text + " \(like)"
+            }
+        }
+        likedByList.text = liked_text
         
-        postText.text = "Test task, no mercy @black_overlord @apple_one_love #ios #swift  #obj-c #anoda #kharkiv #no_storyboard #no_xib #snapkit_forever"
+        if let postDescription = post.postText{
+            postText.text = postDescription
+        }
         
-        postCreationTime.text = "3 hours ago"
+        if let creationTime = post.created{
+            postCreationTime.text = creationTime
+        }
+    }
+    
+    // MARK: Cell views actions methods
+    
+    @objc func pressLikeButton(_ button: UIButton) {
+       SCLAlertView().showInfo("Like pressed", subTitle: "You liked this post!")
+    }
+    
+    @objc func pressMessageButton(_ button: UIButton) {
+        SCLAlertView().showNotice("Message pressed", subTitle: "Do you want to send a message?")
+    }
+    
+    @objc func pressShareButton(_ button: UIButton) {
+        SCLAlertView().showSuccess("Share button pressed", subTitle: "Want to share this post?")
+    }
+    
+    @objc func pressPinButton(_ button: UIButton) {
+        SCLAlertView().showWarning("Pin button pressed", subTitle: "You pinned this post")
     }
     
 }

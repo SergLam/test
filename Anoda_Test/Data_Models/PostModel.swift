@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Post {
+struct Post: Codable {
     var userPhotoURL: String?
     var userName: String?
     var userStatus: String?
@@ -25,37 +25,5 @@ struct Post {
         case likes = "likes"
         case postText = "post_text"
         case created = "created"
-    }
-    
-}
-
-
-extension Post: Encodable
-{
-    func encode(to encoder: Encoder) throws
-    {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(userPhotoURL, forKey: .userPhotoURL)
-        try container.encode(userName, forKey: .userName)
-        try container.encode(userStatus, forKey: .userStatus)
-        try container.encode(postImages, forKey: .postImages)
-        try container.encode(likes, forKey: .likes)
-        try container.encode(postText, forKey: .postText)
-        try container.encode(created, forKey: .created)
-    }
-}
-
-extension Post: Decodable
-{
-    init(from decoder: Decoder) throws
-    {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        userPhotoURL = try values.decode(String.self, forKey: .userPhotoURL)
-        userName = try values.decode(String.self, forKey: .userName)
-        userStatus = try values.decode(String.self, forKey: .userStatus)
-        postImages = try values.decode([String].self, forKey: .postImages)
-        likes = try values.decode([String].self, forKey: .likes)
-        postText = try values.decode(String.self, forKey: .postText)
-        created = try values.decode(String.self, forKey: .created)
     }
 }
