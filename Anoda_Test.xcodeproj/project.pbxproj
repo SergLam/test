@@ -10,6 +10,8 @@
 		2B8831975C967E27EE036BB5 /* Pods_Anoda_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */; };
 		7C61C749215CE206006C0266 /* PostImagesDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C748215CE206006C0266 /* PostImagesDelegateDataSource.swift */; };
 		7C61C74B215CE431006C0266 /* PostImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C74A215CE431006C0266 /* PostImagesDataSource.swift */; };
+		7C61C74F215D300F006C0266 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C74E215D300F006C0266 /* PostModel.swift */; };
+		7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C751215D3212006C0266 /* JSONFileParser.swift */; };
 		7C6D303C215B5D23004E56C7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D303B215B5D23004E56C7 /* UIImage.swift */; };
 		7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D42159636F00DD04A5 /* AppDelegate.swift */; };
 		7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D62159636F00DD04A5 /* MainVC.swift */; };
@@ -43,6 +45,8 @@
 		5F1922AF25932CFCBF6CD696 /* Pods-Anoda_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anoda_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test.release.xcconfig"; sourceTree = "<group>"; };
 		7C61C748215CE206006C0266 /* PostImagesDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagesDelegateDataSource.swift; sourceTree = "<group>"; };
 		7C61C74A215CE431006C0266 /* PostImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagesDataSource.swift; sourceTree = "<group>"; };
+		7C61C74E215D300F006C0266 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		7C61C751215D3212006C0266 /* JSONFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileParser.swift; sourceTree = "<group>"; };
 		7C6D303B215B5D23004E56C7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		7CADC4D12159636F00DD04A5 /* Anoda_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anoda_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CADC4D42159636F00DD04A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7C61C74D215D2FEE006C0266 /* Data_Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C61C74E215D300F006C0266 /* PostModel.swift */,
+			);
+			path = Data_Models;
+			sourceTree = "<group>";
+		};
+		7C61C750215D31F6006C0266 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7C61C751215D3212006C0266 /* JSONFileParser.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		7CADC4C82159636F00DD04A5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,8 @@
 		7CADC4D32159636F00DD04A5 /* Anoda_Test */ = {
 			isa = PBXGroup;
 			children = (
+				7C61C750215D31F6006C0266 /* Networking */,
+				7C61C74D215D2FEE006C0266 /* Data_Models */,
 				7CFD8075215ADDA70016A87B /* Extensions */,
 				7CFD8074215AB4DF0016A87B /* Views */,
 				7CADC4F4215963C200DD04A5 /* TabBarVC */,
@@ -331,10 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CADC4F82159641C00DD04A5 /* SearchVC.swift in Sources */,
+				7C61C74F215D300F006C0266 /* PostModel.swift in Sources */,
 				7C6D303C215B5D23004E56C7 /* UIImage.swift in Sources */,
 				7C61C74B215CE431006C0266 /* PostImagesDataSource.swift in Sources */,
 				7CADC4F62159640300DD04A5 /* HomeVC.swift in Sources */,
 				7C61C749215CE206006C0266 /* PostImagesDelegateDataSource.swift in Sources */,
+				7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */,
 				7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */,
 				7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */,
 				7CFD8077215ADDBD0016A87B /* UIViewController.swift in Sources */,
