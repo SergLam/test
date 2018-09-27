@@ -9,10 +9,10 @@
 import UIKit
 import SnapKit
 
-class HomeVC: UIViewController {
-    
+class HomeVC: UIViewController{
+
     var newsTable = UITableView()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         newsTable.delegate = self
@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Instagramm"
+        self.title = "Instagram"
     }
     
     override func viewWillLayoutSubviews() {
