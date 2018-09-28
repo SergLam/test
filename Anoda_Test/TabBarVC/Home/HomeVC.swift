@@ -21,9 +21,7 @@ class HomeVC: UIViewController{
         super.viewDidLoad()
         newsTable.delegate = self
         newsTable.dataSource = self
-        let invisible_height = tabbarHeight + topbarHeight
-        newsTable.estimatedRowHeight = self.view.frame.height - invisible_height
-        newsTable.rowHeight = self.view.frame.height - invisible_height
+        newsTable.rowHeight = UITableView.automaticDimension
         posts = jsonSource.getLocalJSON()
     }
     

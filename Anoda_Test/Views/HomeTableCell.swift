@@ -12,7 +12,10 @@ import Kingfisher
 import SCLAlertView
 
 class HomeTableCell: UITableViewCell {
-
+    
+    let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
+    
     var postImagesUrlArray: [String] = []
     
     static let cellIdentifier = String(describing: self)
@@ -41,7 +44,6 @@ class HomeTableCell: UITableViewCell {
         self.selectionStyle = .none
         
         postImagesLayout.scrollDirection = .horizontal
-        let width = UIScreen.main.bounds.width
         postImagesLayout.itemSize = CGSize(width: width, height: width)
         postImagesLayout.minimumLineSpacing = 0
         
@@ -62,24 +64,27 @@ class HomeTableCell: UITableViewCell {
         userProfileImage.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(contentView.snp.top).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
-            make.height.width.equalTo(40)
+            make.height.width.equalTo(height/15)
         }
         
         userProfileImage.layer.borderWidth = 1
         userProfileImage.layer.borderColor = UIColor.black.cgColor
-        userProfileImage.layer.cornerRadius = 40 / 2
+        userProfileImage.layer.cornerRadius = height/15/2
         userProfileImage.layer.masksToBounds = true
         
         contentView.addSubview(userName)
+        userName.numberOfLines = 1
+        userName.adjustsFontSizeToFitWidth = true
         userName.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(userProfileImage.snp.top)
+            make.bottom.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userProfileImage.snp.right).offset(10)
             make.height.equalTo(userName.font.lineHeight)
             make.right.equalTo(contentView.snp.right).offset(30)
         }
         contentView.addSubview(userStatus)
+        userStatus.adjustsFontSizeToFitWidth = true
         userStatus.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(userName.snp.top).offset(userName.font.lineHeight)
+            make.top.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userName.snp.left)
             make.height.equalTo(userStatus.font.lineHeight)
             make.right.equalTo(contentView.snp.right).offset(30)
@@ -87,8 +92,8 @@ class HomeTableCell: UITableViewCell {
         
         contentView.addSubview(moreActions)
         moreActions.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(userName.snp.bottom).offset(-userStatus.font.lineHeight/2)
-            make.right.equalTo(contentView.snp.right).offset(-20)
+            make.right.equalTo(contentView.snp.right).offset(-10)
+            make.centerY.equalTo(userProfileImage.snp.centerY)
             make.height.equalTo(5)
             make.width.equalTo(15)
         }
@@ -96,7 +101,7 @@ class HomeTableCell: UITableViewCell {
         
         contentView.addSubview(postImages)
         postImages.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(userProfileImage.snp.bottom).offset(10)
+            make.top.equalTo(userProfileImage.snp.bottom).offset(height/70)
             make.left.equalTo(contentView.snp.left)
             make.width.height.equalTo(contentView.frame.width)
         }
@@ -105,10 +110,10 @@ class HomeTableCell: UITableViewCell {
         pinButton.addTarget(self, action: #selector(pressPinButton(_:)), for: .touchUpInside)
         contentView.addSubview(pinButton)
         pinButton.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(postImages.snp.bottom).offset(15)
+            make.top.equalTo(postImages.snp.bottom).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-15)
-            make.height.equalTo(30)
-            make.width.equalTo(20)
+            make.height.equalTo(width/15)
+            make.width.equalTo(width/22.5)
         }
         
         likeButton.setImage(UIImage.init(named: "like_pressed"), for: .normal)
@@ -117,7 +122,7 @@ class HomeTableCell: UITableViewCell {
         likeButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
-            make.height.width.equalTo(30)
+            make.height.width.equalTo(width/15)
         }
         
         messageButton.setImage(UIImage.init(named: "message"), for: .normal)
@@ -126,7 +131,7 @@ class HomeTableCell: UITableViewCell {
         messageButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(likeButton.snp.right).offset(10)
-            make.height.width.equalTo(30)
+            make.height.width.equalTo(width/15)
         }
         
         shareButton.setImage(UIImage.init(named: "share"), for: .normal)
@@ -135,13 +140,14 @@ class HomeTableCell: UITableViewCell {
         shareButton.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(messageButton.snp.right).offset(10)
-            make.height.width.equalTo(30)
+            make.height.width.equalTo(width/15)
         }
         
         pageControl.tintColor = UIColor.red
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.green
         pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         contentView.addSubview(pageControl)
         pageControl.snp.remakeConstraints{ (make) -> Void in
@@ -151,6 +157,7 @@ class HomeTableCell: UITableViewCell {
         
         likedByList.lineBreakMode = NSLineBreakMode.byWordWrapping
         likedByList.numberOfLines = 2
+        likedByList.adjustsFontSizeToFitWidth = true
         contentView.addSubview(likedByList)
         likedByList.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(likeButton.snp.bottom).offset(10)
@@ -160,6 +167,7 @@ class HomeTableCell: UITableViewCell {
         
         postText.lineBreakMode = NSLineBreakMode.byWordWrapping
         postText.numberOfLines = 3
+        postText.adjustsFontSizeToFitWidth = true
         contentView.addSubview(postText)
         postText.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(likedByList.snp.bottom).offset(10)
@@ -168,9 +176,10 @@ class HomeTableCell: UITableViewCell {
         }
         
         postCreationTime.text = postCreationTime.text?.uppercased()
+        postCreationTime.adjustsFontSizeToFitWidth = true
         contentView.addSubview(postCreationTime)
         postCreationTime.snp.remakeConstraints{ (make) -> Void in
-            make.bottom.equalTo(contentView.snp.bottom).offset(-20)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
             make.left.equalTo(likeButton.snp.left)
             make.width.equalTo(contentView.frame.width - 10)
         }

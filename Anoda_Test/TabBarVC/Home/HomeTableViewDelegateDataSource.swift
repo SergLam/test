@@ -19,4 +19,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         cell.updateCell(post: posts[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.width * 2
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.width * 2
+    }
 }
