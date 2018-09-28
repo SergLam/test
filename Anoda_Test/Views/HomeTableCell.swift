@@ -21,12 +21,8 @@ class HomeTableCell: UITableViewCell {
     var userName = UILabel()
     var userStatus = UILabel()
     var moreActions = UIButton()
-    
     var postImages: UICollectionView!
     let postImagesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    
-//    var postImages = UIImageView()
-    
     var likeButton = UIButton()
     var messageButton = UIButton()
     var shareButton = UIButton()
@@ -48,6 +44,7 @@ class HomeTableCell: UITableViewCell {
         let width = UIScreen.main.bounds.width
         postImagesLayout.itemSize = CGSize(width: width, height: width)
         postImagesLayout.minimumLineSpacing = 0
+        
         postImages = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: postImagesLayout)
         postImages.isPagingEnabled = true
         postImages.register(PostImageCell.self, forCellWithReuseIdentifier: PostImageCell.cellIdentifier)
@@ -57,12 +54,10 @@ class HomeTableCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        // TODO: custom ui layout
         configureUI()
     }
     
     func configureUI(){
-
         contentView.addSubview(userProfileImage)
         userProfileImage.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(contentView.snp.top).offset(10)
@@ -106,6 +101,7 @@ class HomeTableCell: UITableViewCell {
             make.width.height.equalTo(contentView.frame.width)
         }
         
+        pinButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
         pinButton.addTarget(self, action: #selector(pressPinButton(_:)), for: .touchUpInside)
         contentView.addSubview(pinButton)
         pinButton.snp.remakeConstraints{ (make) -> Void in
@@ -115,6 +111,7 @@ class HomeTableCell: UITableViewCell {
             make.width.equalTo(20)
         }
         
+        likeButton.setImage(UIImage.init(named: "like_pressed"), for: .normal)
         likeButton.addTarget(self, action: #selector(pressLikeButton(_:)), for: .touchUpInside)
         contentView.addSubview(likeButton)
         likeButton.snp.remakeConstraints{ (make) -> Void in
@@ -123,6 +120,7 @@ class HomeTableCell: UITableViewCell {
             make.height.width.equalTo(30)
         }
         
+        messageButton.setImage(UIImage.init(named: "message"), for: .normal)
         messageButton.addTarget(self, action: #selector(pressMessageButton(_:)), for: .touchUpInside)
         contentView.addSubview(messageButton)
         messageButton.snp.remakeConstraints{ (make) -> Void in
@@ -131,6 +129,7 @@ class HomeTableCell: UITableViewCell {
             make.height.width.equalTo(30)
         }
         
+        shareButton.setImage(UIImage.init(named: "share"), for: .normal)
         shareButton.addTarget(self, action: #selector(pressShareButton(_:)), for: .touchUpInside)
         contentView.addSubview(shareButton)
         shareButton.snp.remakeConstraints{ (make) -> Void in
@@ -184,7 +183,6 @@ class HomeTableCell: UITableViewCell {
         }
         
         userProfileImage.backgroundColor = UIColor.black
-        
         userName.text = post.userName
         userStatus.text = post.userStatus
         
@@ -195,14 +193,6 @@ class HomeTableCell: UITableViewCell {
         
         pageControl.numberOfPages = postImagesUrlArray.count
         pageControl.currentPage = 0
-        
-        pinButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
-        
-        likeButton.setImage(UIImage.init(named: "like_pressed"), for: .normal)
-        
-        messageButton.setImage(UIImage.init(named: "message"), for: .normal)
-        
-        shareButton.setImage(UIImage.init(named: "share"), for: .normal)
         
         var liked_text = "Liked by"
         if let likes = post.likes{
@@ -215,7 +205,6 @@ class HomeTableCell: UITableViewCell {
         if let postDescription = post.postText{
             postText.text = postDescription
         }
-        
         if let creationTime = post.created{
             postCreationTime.text = creationTime
         }

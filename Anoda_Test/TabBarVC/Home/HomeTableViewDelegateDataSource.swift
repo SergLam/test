@@ -19,5 +19,4 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
         cell.updateCell(post: posts[indexPath.row])
         return cell
     }
-    
 }

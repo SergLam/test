@@ -9,8 +9,6 @@
 import UIKit
 
 extension HomeTableCell: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
-    // MARK: Post images collection view
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return postImagesUrlArray.count
     }
