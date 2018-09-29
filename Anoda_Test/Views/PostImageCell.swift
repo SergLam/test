@@ -23,6 +23,7 @@ class PostImageCell: UICollectionViewCell{
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(postImage)
+        postImage.contentMode = .scaleAspectFill
         postImage.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(contentView.snp.top)
             make.bottom.equalTo(contentView.snp.bottom)
