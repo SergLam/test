@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2B8831975C967E27EE036BB5 /* Pods_Anoda_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */; };
-		7C61C749215CE206006C0266 /* PostImagesDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C748215CE206006C0266 /* PostImagesDelegateDataSource.swift */; };
+		7C61C749215CE206006C0266 /* PostImagesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C748215CE206006C0266 /* PostImagesDelegate.swift */; };
 		7C61C74F215D300F006C0266 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C74E215D300F006C0266 /* PostModel.swift */; };
 		7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C751215D3212006C0266 /* JSONFileParser.swift */; };
-		7C6D303C215B5D23004E56C7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D303B215B5D23004E56C7 /* UIImage.swift */; };
+		7C6D303C215B5D23004E56C7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D303B215B5D23004E56C7 /* UIImageExt.swift */; };
 		7CA0668C215F701C00632D3D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CA0668B215F701C00632D3D /* data.json */; };
 		7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D42159636F00DD04A5 /* AppDelegate.swift */; };
 		7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D62159636F00DD04A5 /* MainVC.swift */; };
@@ -24,9 +24,9 @@
 		7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FB2159643900DD04A5 /* LikesVC.swift */; };
 		7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */; };
 		7CADC50321596F2C00DD04A5 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */; };
-		7CADC50521596F6E00DD04A5 /* HomeTableViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50421596F6E00DD04A5 /* HomeTableViewDelegateDataSource.swift */; };
+		7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */; };
 		7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */; };
-		7CFD8077215ADDBD0016A87B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD8076215ADDBD0016A87B /* UIViewController.swift */; };
+		7CFD8077215ADDBD0016A87B /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +43,10 @@
 		045995B85904CAAF611B634C /* Pods-Anoda_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anoda_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		054112EB0906646CDED21AF0 /* Pods_Anoda_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anoda_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1922AF25932CFCBF6CD696 /* Pods-Anoda_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anoda_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test.release.xcconfig"; sourceTree = "<group>"; };
-		7C61C748215CE206006C0266 /* PostImagesDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagesDelegateDataSource.swift; sourceTree = "<group>"; };
+		7C61C748215CE206006C0266 /* PostImagesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagesDelegate.swift; sourceTree = "<group>"; };
 		7C61C74E215D300F006C0266 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		7C61C751215D3212006C0266 /* JSONFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileParser.swift; sourceTree = "<group>"; };
-		7C6D303B215B5D23004E56C7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7C6D303B215B5D23004E56C7 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		7CA0668B215F701C00632D3D /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		7CADC4D12159636F00DD04A5 /* Anoda_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anoda_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CADC4D42159636F00DD04A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		7CADC4FB2159643900DD04A5 /* LikesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesVC.swift; sourceTree = "<group>"; };
 		7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
-		7CADC50421596F6E00DD04A5 /* HomeTableViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegateDataSource.swift; sourceTree = "<group>"; };
+		7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
-		7CFD8076215ADDBD0016A87B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anoda_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7CADC4F52159640300DD04A5 /* HomeVC.swift */,
-				7CADC50421596F6E00DD04A5 /* HomeTableViewDelegateDataSource.swift */,
+				7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			children = (
 				7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */,
 				7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */,
-				7C61C748215CE206006C0266 /* PostImagesDelegateDataSource.swift */,
+				7C61C748215CE206006C0266 /* PostImagesDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 		7CFD8075215ADDA70016A87B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7CFD8076215ADDBD0016A87B /* UIViewController.swift */,
-				7C6D303B215B5D23004E56C7 /* UIImage.swift */,
+				7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */,
+				7C6D303B215B5D23004E56C7 /* UIImageExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,16 +357,16 @@
 			files = (
 				7CADC4F82159641C00DD04A5 /* SearchVC.swift in Sources */,
 				7C61C74F215D300F006C0266 /* PostModel.swift in Sources */,
-				7C6D303C215B5D23004E56C7 /* UIImage.swift in Sources */,
+				7C6D303C215B5D23004E56C7 /* UIImageExt.swift in Sources */,
 				7CADC4F62159640300DD04A5 /* HomeVC.swift in Sources */,
-				7C61C749215CE206006C0266 /* PostImagesDelegateDataSource.swift in Sources */,
+				7C61C749215CE206006C0266 /* PostImagesDelegate.swift in Sources */,
 				7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */,
 				7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */,
 				7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */,
-				7CFD8077215ADDBD0016A87B /* UIViewController.swift in Sources */,
+				7CFD8077215ADDBD0016A87B /* UIViewControllerExt.swift in Sources */,
 				7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */,
 				7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */,
-				7CADC50521596F6E00DD04A5 /* HomeTableViewDelegateDataSource.swift in Sources */,
+				7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */,
 				7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */,
 				7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */,
 				7CADC50321596F2C00DD04A5 /* HomeTableCell.swift in Sources */,

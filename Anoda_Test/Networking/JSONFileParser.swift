@@ -17,12 +17,8 @@ class JSONFileParser{
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                do {
                     let posts = try JSONDecoder().decode([Post].self, from: data)
                     parsed_posts = posts
-                } catch let error{
-                    print(error)
-                }
         } catch let error {
                 print(error)
             }

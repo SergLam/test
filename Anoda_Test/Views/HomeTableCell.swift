@@ -101,11 +101,12 @@ class HomeTableCell: UITableViewCell {
         
         contentView.addSubview(postImages)
         postImages.snp.remakeConstraints{ (make) -> Void in
-            make.top.equalTo(userProfileImage.snp.bottom).offset(height/70)
+            make.top.equalTo(userProfileImage.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left)
+            make.right.equalTo(contentView.snp.right)
             make.width.height.equalTo(contentView.frame.width)
         }
-        
+
         pinButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
         pinButton.addTarget(self, action: #selector(pressPinButton(_:)), for: .touchUpInside)
         contentView.addSubview(pinButton)
@@ -115,7 +116,7 @@ class HomeTableCell: UITableViewCell {
             make.height.equalTo(width/15)
             make.width.equalTo(width/22.5)
         }
-        
+
         likeButton.setImage(UIImage.init(named: "like_pressed"), for: .normal)
         likeButton.addTarget(self, action: #selector(pressLikeButton(_:)), for: .touchUpInside)
         contentView.addSubview(likeButton)
@@ -124,7 +125,7 @@ class HomeTableCell: UITableViewCell {
             make.left.equalTo(contentView.snp.left).offset(10)
             make.height.width.equalTo(width/15)
         }
-        
+
         messageButton.setImage(UIImage.init(named: "message"), for: .normal)
         messageButton.addTarget(self, action: #selector(pressMessageButton(_:)), for: .touchUpInside)
         contentView.addSubview(messageButton)
@@ -133,7 +134,7 @@ class HomeTableCell: UITableViewCell {
             make.left.equalTo(likeButton.snp.right).offset(10)
             make.height.width.equalTo(width/15)
         }
-        
+
         shareButton.setImage(UIImage.init(named: "share"), for: .normal)
         shareButton.addTarget(self, action: #selector(pressShareButton(_:)), for: .touchUpInside)
         contentView.addSubview(shareButton)
@@ -142,48 +143,48 @@ class HomeTableCell: UITableViewCell {
             make.left.equalTo(messageButton.snp.right).offset(10)
             make.height.width.equalTo(width/15)
         }
-        
+
         pageControl.tintColor = UIColor.red
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.green
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        
+
         contentView.addSubview(pageControl)
         pageControl.snp.remakeConstraints{ (make) -> Void in
             make.centerX.equalTo(contentView.center.x)
             make.centerY.equalTo(likeButton.snp.centerY)
         }
-        
+
         likedByList.lineBreakMode = NSLineBreakMode.byWordWrapping
         likedByList.numberOfLines = 2
         likedByList.adjustsFontSizeToFitWidth = true
         contentView.addSubview(likedByList)
         likedByList.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(likeButton.snp.bottom).offset(10)
-            make.left.equalTo(likeButton.snp.left)
-            make.width.equalTo(contentView.frame.width - 10)
+            make.left.equalTo(contentView.snp.left).offset(10)
+            make.right.equalTo(contentView.snp.right).offset(-10)
         }
-        
+
         postText.lineBreakMode = NSLineBreakMode.byWordWrapping
         postText.numberOfLines = 3
         postText.adjustsFontSizeToFitWidth = true
         contentView.addSubview(postText)
         postText.snp.remakeConstraints{ (make) -> Void in
             make.top.equalTo(likedByList.snp.bottom).offset(10)
-            make.left.equalTo(likeButton.snp.left)
-            make.width.equalTo(contentView.frame.width - 10)
+            make.left.equalTo(contentView.snp.left).offset(10)
+            make.right.equalTo(contentView.snp.right).offset(-10)
         }
-        
+
         postCreationTime.text = postCreationTime.text?.uppercased()
         postCreationTime.adjustsFontSizeToFitWidth = true
         contentView.addSubview(postCreationTime)
         postCreationTime.snp.remakeConstraints{ (make) -> Void in
-            make.bottom.equalTo(contentView.snp.bottom).offset(-10)
-            make.left.equalTo(likeButton.snp.left)
-            make.width.equalTo(contentView.frame.width - 10)
+            make.top.equalTo(postText.snp.bottom).offset(10)
+            make.left.equalTo(contentView.snp.left).offset(10)
+            make.right.equalTo(contentView.snp.right).offset(-10)
         }
-                
+        
     }
     
     func updateCell(post: Post){
