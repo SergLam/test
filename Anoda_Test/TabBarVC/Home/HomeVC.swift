@@ -21,20 +21,21 @@ class HomeVC: UIViewController{
         super.viewDidLoad()
         newsTable.delegate = self
         newsTable.dataSource = self
-        newsTable.rowHeight = UITableView.automaticDimension
         posts = jsonSource.getLocalJSON()
+        self.title = "Instagram"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = "Instagram"
     }
     
     override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         configureUI()
     }
     
-    func configureUI(){
+    func configureUI() {
+        newsTable.separatorStyle = .none
         self.view.addSubview(newsTable)
         newsTable.snp.remakeConstraints{ (make) -> Void in
             if #available(iOS 11, *) {

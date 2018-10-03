@@ -29,5 +29,11 @@ extension HomeTableCell: UICollectionViewDataSource, UICollectionViewDelegate, U
         // Get HomeTable cell and set page controller index
         self.pageControl.currentPage = currentPostImageCellIndex
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize{
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
 }
 

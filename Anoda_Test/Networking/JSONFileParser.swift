@@ -12,18 +12,18 @@ class JSONFileParser{
     
     static let shared = JSONFileParser()
         
-    func getLocalJSON() -> [Post]{
-        var parsed_posts: [Post] = []
+    func getLocalJSON() -> [Post] {
+        var parsedPosts: [Post] = []
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     let posts = try JSONDecoder().decode([Post].self, from: data)
-                    parsed_posts = posts
+                    parsedPosts = posts
         } catch let error {
                 print(error)
             }
     }
-        return parsed_posts
+        return parsedPosts
     }
     
 }

@@ -26,4 +26,5 @@ struct Post: Codable {
         case postText = "post_text"
         case created = "created"
     }
+    
 }

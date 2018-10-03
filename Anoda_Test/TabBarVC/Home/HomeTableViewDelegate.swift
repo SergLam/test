@@ -15,16 +15,11 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeTableCell.init(style: .default, reuseIdentifier: HomeTableCell.cellIdentifier)
-        cell.postImages.register(PostImageCell.self, forCellWithReuseIdentifier: PostImageCell.cellIdentifier)
         cell.updateCell(post: posts[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.width * 2
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.width * 2
+        return UITableView.automaticDimension
     }
 }

@@ -11,13 +11,9 @@ import UIKit
 class MainVC: UITabBarController {
     
     let homeVC = HomeVC()
-    
     let searchVC = SearchVC()
-    
     let addPostVC = AddPostVC()
-    
     let likesVC = LikesVC()
-    
     let profileVC = ProfileVC()
     
     override func viewDidLoad() {
@@ -25,7 +21,7 @@ class MainVC: UITabBarController {
         configureUI()
     }
     
-    func configureUI(){
+    func configureUI() {
         homeVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 0)
         searchVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .search, tag: 1)
         addPostVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .recents, tag: 2)

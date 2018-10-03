@@ -26,7 +26,6 @@
 		7CADC50321596F2C00DD04A5 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */; };
 		7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */; };
 		7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */; };
-		7CFD8077215ADDBD0016A87B /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 		7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
 		7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
-		7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anoda_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,7 +192,6 @@
 		7CFD8075215ADDA70016A87B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7CFD8076215ADDBD0016A87B /* UIViewControllerExt.swift */,
 				7C6D303B215B5D23004E56C7 /* UIImageExt.swift */,
 			);
 			path = Extensions;
@@ -363,7 +360,6 @@
 				7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */,
 				7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */,
 				7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */,
-				7CFD8077215ADDBD0016A87B /* UIViewControllerExt.swift in Sources */,
 				7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */,
 				7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */,
 				7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */,

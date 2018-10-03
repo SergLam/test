@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class PostImageCell: UICollectionViewCell{
+class PostImageCell: UICollectionViewCell {
     
     static let cellIdentifier = String(describing: self)
     
@@ -32,7 +32,7 @@ class PostImageCell: UICollectionViewCell{
         }
     }
     
-    func updateCell(image_url: String?){
+    func updateCell(image_url: String?) {
         if let url = URL(string: image_url ?? ""){
             postImage.kf.setImage(with: url)
         }
