@@ -62,7 +62,7 @@ class HomeTableCell: UITableViewCell {
         userName.numberOfLines = 0
         userName.adjustsFontSizeToFitWidth = true
         userName.sizeToFit()
-        userName.snp.remakeConstraints{ (make) -> Void in
+        userName.snp.makeConstraints{ (make) -> Void in
             make.bottom.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userProfileImage.snp.right).offset(10)
             make.top.equalTo(userProfileImage.snp.top)
@@ -72,7 +72,7 @@ class HomeTableCell: UITableViewCell {
         userStatus.numberOfLines = 0
         userStatus.adjustsFontSizeToFitWidth = true
         userStatus.sizeToFit()
-        userStatus.snp.remakeConstraints{ (make) -> Void in
+        userStatus.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userName.snp.left)
             make.bottom.equalTo(userProfileImage.snp.bottom)
@@ -80,7 +80,7 @@ class HomeTableCell: UITableViewCell {
         }
 
         contentView.addSubview(moreActions)
-        moreActions.snp.remakeConstraints{ (make) -> Void in
+        moreActions.snp.makeConstraints{ (make) -> Void in
             make.right.equalTo(contentView.snp.right).offset(-10)
             make.centerY.equalTo(userProfileImage.snp.centerY)
             make.height.equalTo(5)
@@ -97,7 +97,7 @@ class HomeTableCell: UITableViewCell {
         postImages.showsVerticalScrollIndicator = false
         postImages.isPagingEnabled = true
         contentView.addSubview(postImages)
-        postImages.snp.remakeConstraints{ (make) -> Void in
+        postImages.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(userProfileImage.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left)
             make.right.equalTo(contentView.snp.right)
@@ -107,7 +107,7 @@ class HomeTableCell: UITableViewCell {
         pinButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
         pinButton.addTarget(self, action: #selector(pinPost(_:)), for: .touchUpInside)
         contentView.addSubview(pinButton)
-        pinButton.snp.remakeConstraints{ (make) -> Void in
+        pinButton.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-15)
             make.height.equalTo(20)
@@ -117,7 +117,7 @@ class HomeTableCell: UITableViewCell {
         likeButton.setImage(UIImage.init(named: "like_pressed"), for: .normal)
         likeButton.addTarget(self, action: #selector(likePost(_:)), for: .touchUpInside)
         contentView.addSubview(likeButton)
-        likeButton.snp.remakeConstraints{ (make) -> Void in
+        likeButton.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
             make.height.width.equalTo(20)
@@ -126,7 +126,7 @@ class HomeTableCell: UITableViewCell {
         messageButton.setImage(UIImage.init(named: "message"), for: .normal)
         messageButton.addTarget(self, action: #selector(sendMessage(_:)), for: .touchUpInside)
         contentView.addSubview(messageButton)
-        messageButton.snp.remakeConstraints{ (make) -> Void in
+        messageButton.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(likeButton.snp.right).offset(10)
             make.height.width.equalTo(20)
@@ -135,7 +135,7 @@ class HomeTableCell: UITableViewCell {
         shareButton.setImage(UIImage.init(named: "share"), for: .normal)
         shareButton.addTarget(self, action: #selector(sharePost(_:)), for: .touchUpInside)
         contentView.addSubview(shareButton)
-        shareButton.snp.remakeConstraints{ (make) -> Void in
+        shareButton.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(postImages.snp.bottom).offset(10)
             make.left.equalTo(messageButton.snp.right).offset(10)
             make.height.width.equalTo(20)
@@ -148,7 +148,7 @@ class HomeTableCell: UITableViewCell {
         pageControl.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
 
         contentView.addSubview(pageControl)
-        pageControl.snp.remakeConstraints{ (make) -> Void in
+        pageControl.snp.makeConstraints{ (make) -> Void in
             make.centerX.equalTo(contentView.center.x)
             make.centerY.equalTo(likeButton.snp.centerY)
         }
@@ -157,7 +157,7 @@ class HomeTableCell: UITableViewCell {
         likedByList.numberOfLines = 0
         likedByList.adjustsFontSizeToFitWidth = true
         contentView.addSubview(likedByList)
-        likedByList.snp.remakeConstraints{ (make) -> Void in
+        likedByList.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(likeButton.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-10)
@@ -167,7 +167,7 @@ class HomeTableCell: UITableViewCell {
         postText.numberOfLines = 0
         postText.adjustsFontSizeToFitWidth = true
         contentView.addSubview(postText)
-        postText.snp.remakeConstraints{ (make) -> Void in
+        postText.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(likedByList.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-10)
@@ -177,7 +177,7 @@ class HomeTableCell: UITableViewCell {
         postCreationTime.adjustsFontSizeToFitWidth = true
         postCreationTime.numberOfLines = 1
         contentView.addSubview(postCreationTime)
-        postCreationTime.snp.remakeConstraints{ (make) -> Void in
+        postCreationTime.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(postText.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-10)

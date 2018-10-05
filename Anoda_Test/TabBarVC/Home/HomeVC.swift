@@ -37,7 +37,7 @@ class HomeVC: UIViewController{
     func configureUI() {
         newsTable.separatorStyle = .none
         self.view.addSubview(newsTable)
-        newsTable.snp.remakeConstraints{ (make) -> Void in
+        newsTable.snp.makeConstraints{ (make) -> Void in
             if #available(iOS 11, *) {
                 make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
             } else {
