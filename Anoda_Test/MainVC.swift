@@ -10,11 +10,11 @@ import UIKit
 
 class MainVC: UITabBarController {
     
-    let homeVC = HomeVC()
-    let searchVC = SearchVC()
-    let addPostVC = AddPostVC()
-    let likesVC = LikesVC()
-    let profileVC = ProfileVC()
+    private let homeVC = HomeVC()
+    private let searchVC = SearchVC()
+    private let addPostVC = AddPostVC()
+    private let likesVC = LikesVC()
+    private let profileVC = ProfileVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()

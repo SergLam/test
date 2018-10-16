@@ -12,7 +12,7 @@ class JSONFileParser{
     
     static let shared = JSONFileParser()
         
-    func getLocalJSON() -> [Post] {
+    func postsFromLocalJSON() -> [Post] {
         var parsedPosts: [Post] = []
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {

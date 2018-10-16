@@ -14,7 +14,7 @@ class PostImageCell: UICollectionViewCell {
     
     static let cellIdentifier = String(describing: self)
     
-    var postImage = UIImageView()
+    private var postImage = UIImageView()
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")

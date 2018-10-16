@@ -21,16 +21,8 @@ class HomeVC: UIViewController{
         super.viewDidLoad()
         newsTable.delegate = self
         newsTable.dataSource = self
-        posts = jsonSource.getLocalJSON()
+        posts = jsonSource.postsFromLocalJSON()
         self.title = "Instagram"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
         configureUI()
     }
     

@@ -10,12 +10,12 @@ import UIKit
 
 struct Post: Codable {
     var userPhotoURL: String?
-    var userName: String?
+    var userName: String
     var userStatus: String?
-    var postImages: [String]?
+    var postImages: [String]
     var likes: [String]?
-    var postText: String?
-    var created: String?
+    var postText: String
+    var created: String
     
     enum CodingKeys: String, CodingKey {
         case userPhotoURL = "user_photo_url"

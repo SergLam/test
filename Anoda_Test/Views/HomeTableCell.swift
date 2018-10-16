@@ -15,20 +15,20 @@ class HomeTableCell: UITableViewCell {
     static let cellIdentifier = String(describing: self)
     
     var postImagesUrlArray: [String] = []
-    let userProfileImage = UIImageView()
-    let userName = UILabel()
-    let userStatus = UILabel()
-    let moreActions = UIButton()
-    let postImages: UICollectionView
-    let postImagesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    let likeButton = UIButton()
-    let messageButton = UIButton()
-    let shareButton = UIButton()
-    let pinButton = UIButton()
+    private let userProfileImage = UIImageView()
+    private let userName = UILabel()
+    private let userStatus = UILabel()
+    private let moreActions = UIButton()
+    private let postImages: UICollectionView
+    private let postImagesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+    private let likeButton = UIButton()
+    private let messageButton = UIButton()
+    private let shareButton = UIButton()
+    private let pinButton = UIButton()
     let pageControl = UIPageControl()
-    let likedByList = UILabel()
-    let postText = UILabel()
-    let postCreationTime = UILabel()
+    private let likedByList = UILabel()
+    private let postText = UILabel()
+    private let postCreationTime = UILabel()
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")
@@ -59,9 +59,6 @@ class HomeTableCell: UITableViewCell {
         userProfileImage.setRounded(imageRarius: 60)
         
         contentView.addSubview(userName)
-        userName.numberOfLines = 0
-        userName.adjustsFontSizeToFitWidth = true
-        userName.sizeToFit()
         userName.snp.makeConstraints{ (make) -> Void in
             make.bottom.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userProfileImage.snp.right).offset(10)
@@ -69,9 +66,6 @@ class HomeTableCell: UITableViewCell {
             make.right.equalTo(contentView.snp.right).offset(30)
         }
         contentView.addSubview(userStatus)
-        userStatus.numberOfLines = 0
-        userStatus.adjustsFontSizeToFitWidth = true
-        userStatus.sizeToFit()
         userStatus.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(userProfileImage.snp.centerY)
             make.left.equalTo(userName.snp.left)
@@ -153,19 +147,13 @@ class HomeTableCell: UITableViewCell {
             make.centerY.equalTo(likeButton.snp.centerY)
         }
 
-        likedByList.lineBreakMode = NSLineBreakMode.byWordWrapping
-        likedByList.numberOfLines = 0
-        likedByList.adjustsFontSizeToFitWidth = true
         contentView.addSubview(likedByList)
         likedByList.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(likeButton.snp.bottom).offset(10)
             make.left.equalTo(contentView.snp.left).offset(10)
             make.right.equalTo(contentView.snp.right).offset(-10)
         }
-
-        postText.lineBreakMode = NSLineBreakMode.byWordWrapping
-        postText.numberOfLines = 0
-        postText.adjustsFontSizeToFitWidth = true
+        
         contentView.addSubview(postText)
         postText.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(likedByList.snp.bottom).offset(10)
@@ -195,10 +183,9 @@ class HomeTableCell: UITableViewCell {
         userName.text = post.userName
         userStatus.text = post.userStatus
         
-        if let postPictures = post.postImages{
-            postImagesUrlArray = postPictures
-            postImages.reloadData()
-        }
+        postImagesUrlArray = post.postImages
+        postImages.reloadData()
+        
         
         pageControl.numberOfPages = postImagesUrlArray.count
         pageControl.currentPage = 0
@@ -210,13 +197,9 @@ class HomeTableCell: UITableViewCell {
             }
         }
         likedByList.text = liked_text
+        postText.text = post.postText
         
-        if let postDescription = post.postText {
-            postText.text = postDescription
-        }
-        if let creationTime = post.created {
-            postCreationTime.text = creationTime
-        }
+        postCreationTime.text = post.created
     }
     
     // MARK: Cell views actions methods
