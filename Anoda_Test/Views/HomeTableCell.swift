@@ -84,7 +84,7 @@ class HomeTableCell: UITableViewCell {
 
         let postImageCellHeight: CGFloat = 300
         postImagesLayout.scrollDirection = .horizontal
-        postImagesLayout.itemSize = CGSize(width: contentView.frame.width, height: postImageCellHeight)
+        postImagesLayout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: postImageCellHeight)
         postImagesLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         postImagesLayout.minimumLineSpacing = 0
         
@@ -93,8 +93,8 @@ class HomeTableCell: UITableViewCell {
         contentView.addSubview(postImages)
         postImages.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(userProfileImage.snp.bottom).offset(10)
-            make.left.equalTo(contentView.snp.left)
-            make.right.equalTo(contentView.snp.right)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.height.equalTo(postImageCellHeight)
         }
 
@@ -143,7 +143,7 @@ class HomeTableCell: UITableViewCell {
 
         contentView.addSubview(pageControl)
         pageControl.snp.makeConstraints{ (make) -> Void in
-            make.centerX.equalTo(contentView.center.x)
+            make.centerX.equalTo(UIScreen.main.bounds.width / 2)
             make.centerY.equalTo(likeButton.snp.centerY)
         }
 

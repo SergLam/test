@@ -25,10 +25,7 @@ class PostImageCell: UICollectionViewCell {
         contentView.addSubview(postImage)
         postImage.contentMode = .scaleAspectFill
         postImage.snp.makeConstraints{ (make) -> Void in
-            make.top.equalTo(contentView.snp.top)
-            make.bottom.equalTo(contentView.snp.bottom)
-            make.left.equalTo(contentView.snp.left)
-            make.right.equalTo(contentView.snp.right)
+            make.edges.equalToSuperview()
         }
     }
     
