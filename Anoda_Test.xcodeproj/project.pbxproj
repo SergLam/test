@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B8831975C967E27EE036BB5 /* Pods_Anoda_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */; };
+		7C61C749215CE206006C0266 /* PostImagesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C748215CE206006C0266 /* PostImagesDelegate.swift */; };
+		7C61C74F215D300F006C0266 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C74E215D300F006C0266 /* PostModel.swift */; };
+		7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61C751215D3212006C0266 /* JSONFileParser.swift */; };
+		7C6D303C215B5D23004E56C7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D303B215B5D23004E56C7 /* UIImageExt.swift */; };
+		7CA0668C215F701C00632D3D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CA0668B215F701C00632D3D /* data.json */; };
 		7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D42159636F00DD04A5 /* AppDelegate.swift */; };
 		7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4D62159636F00DD04A5 /* MainVC.swift */; };
 		7CADC4DC2159637000DD04A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CADC4DB2159637000DD04A5 /* Assets.xcassets */; };
@@ -17,6 +23,9 @@
 		7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4F92159643000DD04A5 /* AddPostVC.swift */; };
 		7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FB2159643900DD04A5 /* LikesVC.swift */; };
 		7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */; };
+		7CADC50321596F2C00DD04A5 /* HomeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */; };
+		7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */; };
+		7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045995B85904CAAF611B634C /* Pods-Anoda_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anoda_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		054112EB0906646CDED21AF0 /* Pods_Anoda_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anoda_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1922AF25932CFCBF6CD696 /* Pods-Anoda_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anoda_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test.release.xcconfig"; sourceTree = "<group>"; };
+		7C61C748215CE206006C0266 /* PostImagesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImagesDelegate.swift; sourceTree = "<group>"; };
+		7C61C74E215D300F006C0266 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		7C61C751215D3212006C0266 /* JSONFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileParser.swift; sourceTree = "<group>"; };
+		7C6D303B215B5D23004E56C7 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		7CA0668B215F701C00632D3D /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		7CADC4D12159636F00DD04A5 /* Anoda_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anoda_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CADC4D42159636F00DD04A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CADC4D62159636F00DD04A5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -44,6 +61,10 @@
 		7CADC4F92159643000DD04A5 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		7CADC4FB2159643900DD04A5 /* LikesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesVC.swift; sourceTree = "<group>"; };
 		7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
+		7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCell.swift; sourceTree = "<group>"; };
+		7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
+		7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anoda_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8831975C967E27EE036BB5 /* Pods_Anoda_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +86,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00ABA197745FE8DBF1E62126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				045995B85904CAAF611B634C /* Pods-Anoda_Test.debug.xcconfig */,
+				5F1922AF25932CFCBF6CD696 /* Pods-Anoda_Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C61C74D215D2FEE006C0266 /* Data_Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C61C74E215D300F006C0266 /* PostModel.swift */,
+			);
+			path = Data_Models;
+			sourceTree = "<group>";
+		};
+		7C61C750215D31F6006C0266 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7C61C751215D3212006C0266 /* JSONFileParser.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		7CADC4C82159636F00DD04A5 = {
 			isa = PBXGroup;
 			children = (
 				7CADC4D32159636F00DD04A5 /* Anoda_Test */,
 				7CADC4E82159637000DD04A5 /* Anoda_TestTests */,
 				7CADC4D22159636F00DD04A5 /* Products */,
+				00ABA197745FE8DBF1E62126 /* Pods */,
+				AD23F9280C544D052636B14D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,12 +134,17 @@
 		7CADC4D32159636F00DD04A5 /* Anoda_Test */ = {
 			isa = PBXGroup;
 			children = (
+				7C61C750215D31F6006C0266 /* Networking */,
+				7C61C74D215D2FEE006C0266 /* Data_Models */,
+				7CFD8075215ADDA70016A87B /* Extensions */,
+				7CFD8074215AB4DF0016A87B /* Views */,
 				7CADC4F4215963C200DD04A5 /* TabBarVC */,
 				7CADC4D42159636F00DD04A5 /* AppDelegate.swift */,
 				7CADC4D62159636F00DD04A5 /* MainVC.swift */,
 				7CADC4DB2159637000DD04A5 /* Assets.xcassets */,
 				7CADC4DD2159637000DD04A5 /* LaunchScreen.storyboard */,
 				7CADC4E02159637000DD04A5 /* Info.plist */,
+				7CA0668B215F701C00632D3D /* data.json */,
 			);
 			path = Anoda_Test;
 			sourceTree = "<group>";
@@ -107,13 +161,49 @@
 		7CADC4F4215963C200DD04A5 /* TabBarVC */ = {
 			isa = PBXGroup;
 			children = (
-				7CADC4F52159640300DD04A5 /* HomeVC.swift */,
+				7CADC50121596F0D00DD04A5 /* Home */,
 				7CADC4F72159641C00DD04A5 /* SearchVC.swift */,
 				7CADC4F92159643000DD04A5 /* AddPostVC.swift */,
 				7CADC4FB2159643900DD04A5 /* LikesVC.swift */,
 				7CADC4FD2159644300DD04A5 /* MyProfileVC.swift */,
 			);
 			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		7CADC50121596F0D00DD04A5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC4F52159640300DD04A5 /* HomeVC.swift */,
+				7CADC50421596F6E00DD04A5 /* HomeTableViewDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7CFD8074215AB4DF0016A87B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CADC50221596F2C00DD04A5 /* HomeTableCell.swift */,
+				7CEB8014215C231E00A6C6F0 /* PostImageCell.swift */,
+				7C61C748215CE206006C0266 /* PostImagesDelegate.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CFD8075215ADDA70016A87B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C6D303B215B5D23004E56C7 /* UIImageExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD23F9280C544D052636B14D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F67E440473D4EEC4AB23B82 /* Pods_Anoda_Test.framework */,
+				054112EB0906646CDED21AF0 /* Pods_Anoda_TestTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CADC4EE2159637000DD04A5 /* Build configuration list for PBXNativeTarget "Anoda_Test" */;
 			buildPhases = (
+				793DB85594F42715298EBE1D /* [CP] Check Pods Manifest.lock */,
 				7CADC4CD2159636F00DD04A5 /* Sources */,
 				7CADC4CE2159636F00DD04A5 /* Frameworks */,
 				7CADC4CF2159636F00DD04A5 /* Resources */,
+				49C82F77221EDB4D2DEA2BC9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CADC4DF2159637000DD04A5 /* LaunchScreen.storyboard in Resources */,
+				7CA0668C215F701C00632D3D /* data.json in Resources */,
 				7CADC4DC2159637000DD04A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,18 +304,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49C82F77221EDB4D2DEA2BC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Anoda_Test/Pods-Anoda_Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		793DB85594F42715298EBE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anoda_Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7CADC4CD2159636F00DD04A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7CADC4F82159641C00DD04A5 /* SearchVC.swift in Sources */,
+				7C61C74F215D300F006C0266 /* PostModel.swift in Sources */,
+				7C6D303C215B5D23004E56C7 /* UIImageExt.swift in Sources */,
 				7CADC4F62159640300DD04A5 /* HomeVC.swift in Sources */,
+				7C61C749215CE206006C0266 /* PostImagesDelegate.swift in Sources */,
+				7C61C752215D3212006C0266 /* JSONFileParser.swift in Sources */,
 				7CADC4FA2159643000DD04A5 /* AddPostVC.swift in Sources */,
 				7CADC4FE2159644300DD04A5 /* MyProfileVC.swift in Sources */,
 				7CADC4D72159636F00DD04A5 /* MainVC.swift in Sources */,
+				7CEB8015215C231E00A6C6F0 /* PostImageCell.swift in Sources */,
+				7CADC50521596F6E00DD04A5 /* HomeTableViewDelegate.swift in Sources */,
 				7CADC4D52159636F00DD04A5 /* AppDelegate.swift in Sources */,
 				7CADC4FC2159643900DD04A5 /* LikesVC.swift in Sources */,
+				7CADC50321596F2C00DD04A5 /* HomeTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +517,7 @@
 		};
 		7CADC4EF2159637000DD04A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045995B85904CAAF611B634C /* Pods-Anoda_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +536,7 @@
 		};
 		7CADC4F02159637000DD04A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1922AF25932CFCBF6CD696 /* Pods-Anoda_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

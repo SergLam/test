@@ -13,6 +13,7 @@ class AddPostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.gray
+        self.title = "Add post"
     }
     
 }

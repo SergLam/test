@@ -10,29 +10,26 @@ import UIKit
 
 class MainVC: UITabBarController {
     
-    let homeVC = HomeVC()
-    
-    let searchVC = SearchVC()
-    
-    let addPostVC = AddPostVC()
-    
-    let likesVC = LikesVC()
-    
-    let profileVC = ProfileVC()
+    private let homeVC = HomeVC()
+    private let searchVC = SearchVC()
+    private let addPostVC = AddPostVC()
+    private let likesVC = LikesVC()
+    private let profileVC = ProfileVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
     
-    func configureUI(){
+    func configureUI() {
         homeVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 0)
         searchVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .search, tag: 1)
         addPostVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .recents, tag: 2)
         likesVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .favorites, tag: 3)
         profileVC.tabBarItem = UITabBarItem.init(tabBarSystemItem: .contacts, tag: 4)
         self.tabBar.isTranslucent = false
-        self.viewControllers = [homeVC, searchVC, addPostVC, likesVC, profileVC]
+        let controllers = [homeVC, searchVC, addPostVC, likesVC, profileVC]
+        self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         self.selectedIndex = 0
     }
     
